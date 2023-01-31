@@ -14,6 +14,7 @@ const Featuresdeux = () => {
 
   const [open, setOpen] = useState([]);
 
+  
 const toggle = (index) => {
   if(open === index){
     return setOpen(null)
@@ -29,22 +30,22 @@ const accordionData =[
           answer : "Le Prêt BONNE ANNEE CREDIT BNI est consenti pour financer des besoins de consommation après les fêtes et autres évènements sociaux marquants de fin d'année précédente : célébrations familiales et communautaires, voyages d'agrément, équipement, étrennes ..."
       },
       {
-          question :"Qui peut bénéficier du Prêt BONNE ANNEE CREDIT BNI?",
+          question :"Qui peut bénéficier du Prêt?",
           answer : "Tout client BNI salariés du privé ou du public, para public, corps habillés et retraités titulaires d'un compte chèque"
       },
       {
-          question :"Quelles sont les caractéristiques du Prêt BONNE ANNEE CREDIT BNI?",
+          question :"Quelles sont les caractéristiques du Prêt?",
           answer : `Taux : 6,5% HT
                   -Durée de remboursement : 36 mois maximum
                   -Taux d'endettement : selon les nouvelles quotités cessibles DECRET DE JUIN 2014
                   - Délais de mise en place : à partir de 72H`
       },
       {
-          question :"Quelles sont les conditions pour bénéficier du Prêt BONNE ANNEE CREDIT BNI?",
+          question :"Quel est le plafond de la demande du Prêt?",
           answer : "40 000 000 FCFA"
       },
       {
-          question :"Quelles sont les conditions pour bénéficier du Prêt BONNE ANNEE CREDIT BNI?",
+          question :"Quelles sont les conditions pour bénéficier du Prêt?",
           answer : `- Domicilier son salaire ou ses revenus à la BNI 
                     - Souscrire à un package prioritaire: Primo, Evolution, Elite ou Prestige 
                     - Nantissement sur la durée du prêt du PEC ou PEL à constituer obligatoirement selon les conditions standards

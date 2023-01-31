@@ -6,6 +6,9 @@ const MySwal = withReactContent(Swal);
 import baseUrl from "@/utils/baseUrl";
 import Link from "next/link";
 import type, { NextPage } from "next";
+import {useForm} from 'react-hook-form';
+import { ErrorMessage } from "@hookform/error-message";
+import { Alert } from "react-bootstrap";
 
 const alertContent = () => {
   MySwal.fire({
@@ -37,8 +40,9 @@ const RequestAVisit = () => {
   var [residence,setResidence] = useState('');
   var [assure,setAssure] = useState('');
 
-  const handleSubmit = async (e) =>{
-    e.preventDefault();
+  const {register, formState: { errors }, handleSubmit} = useForm();
+
+  const onSubmit = () => {
     const data = {
       Vehicule:vehicule,
       Name:fullname,
@@ -48,24 +52,7 @@ const RequestAVisit = () => {
       Assure:assure,
     }
 
-    // const response = fetch(input = '/api/submit', init = {
-    //   method : 'POST',
-    //   headers : {
-    //     'Accept' : 'application/json',
-    //     'Content-Type' : 'application/json'
-    //   },
-    //   body : JSON.stringify(data)
-    // })
-
-    // setName('');
-    // setEmail('');
-    // setNumber('');
-    // setReason('');
-    // setText('');
-    // alertContent();
-
-
-    axios.post('/api/submit',data).then((response)=>{
+    axios.post('/api/submit', data).then((response)=>{
       console.log(response);
       setVehicule('');
       setName('');
@@ -73,67 +60,14 @@ const RequestAVisit = () => {
       setNumber('');
       setResidence('');
       setAssure('');
-
+  
       alertContent();
     }).catch((err) =>console.log(err))
-
+  
     console.log(data)
-  }
-
- /* const [contact, setContact] = useState(INITIAL_STATE);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setContact((prevState) => ({ ...prevState, [name]: value }));
-    // console.log(contact)
   };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const url = `${baseUrl}/api/contact/`;
-      const { name, email, number,reason, text } = contact;
-      const payload = { name, email, number,reason, text };
-      const response = await axios.post(url, payload);
-      console.log(response);
-      setContact(INITIAL_STATE);
-      alertContent();
-    } catch (error) {
-      console.log(error);
-    }
-  };
-*/
-
-// const Home = NextPage = () =>{
-//   const [name, setName] = useState(initialState = '')
-//   const [email, setEmail] = useState(initialState = '')
-//   const [number, setNumber] = useState(initialState = '')
-//   const [reason, setReason] = useState(initialState = '')
-//   const [text, setText] = useState(initialState = '')
-// }
-
-// const handleSubmit = async (e) => {
-//   e.preventDefault();
-
-//   const form = {
-//     name,
-//     email,
-//     number,
-//     reason,
-//     text
-//   }
-//   // try {
-//   //   const url = `${baseUrl}/api/contact/`;
-//   //   const { name, email, number,reason, text } = contact;
-//   //   const payload = { name, email, number,reason, text };
-//   //   const response = await axios.post(url, payload);
-//   //   console.log(response);
-//   //   setContact(INITIAL_STATE);
-//   //   alertContent();
-//   // } catch (error) {
-//   //   console.log(error);
-//   // }
-// };
+  
+  
 
   return (
     <div className="request-a-visit-area bg2 ptb-50" id="forms">
@@ -142,7 +76,7 @@ const RequestAVisit = () => {
         <div
           className="request-a-visit-form"
         >
-         <form onSubmit={handleSubmit}>
+         <form onSubmit={handleSubmit(onSubmit)} noValidate>
          <div className="form-group">
             <p>Avez-vous un compte à BNI?*</p>
             <select className="form-select" 
@@ -151,15 +85,15 @@ const RequestAVisit = () => {
                 value={vehicule}
                 onChange={(e) => setVehicule(e.target.value)}
             required>
-              <option defaultValue="">---</option>
-              <option defaultValue="Oui">Oui</option>
               <option defaultValue="Non">Non</option>
+              <option defaultValue="Oui">Oui</option>
             </select>
           </div>
 
             <div className="form-group">
               
               <input
+                          {...register('fullName',{required : 'Nom & Prénoms est obligatoire' })}
                           type="text"
                           name="fullName"
                           id="fullName"
@@ -169,12 +103,17 @@ const RequestAVisit = () => {
                           onChange={(e) => setName(e.target.value)}
                           required
                         />
+              {
+                errors.fullName && <span className="text-[#BB0D1C]" >{errors.fullName.message}</span>
+              }
             </div>
 
             <div className="form-group">
               
               <input
-                          type="text"
+                          
+                          type="number"
+                          {...register('number',{required : 'Numero de téléphone est obligatoire', minLength : {value : 10, message : "Numero de téléphone invalide (au moins 8 chiffres)"} })}
                           name="number"
                           id="number"
                           placeholder="Numéro de téléphone*"
@@ -183,11 +122,15 @@ const RequestAVisit = () => {
                           onChange={(e) => setNumber(e.target.value)}
                           required
                         />
+              {
+                errors.number && <span className="text-[#BB0D1C]" >{errors.number.message}</span>
+              }
             </div>
 
             <div className="form-group">
               
               <input
+                          {...register('email',{ pattern :{ value : /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, message : 'Email invalide'}})}
                           type="text"
                           name="email"
                           id="email"
@@ -195,12 +138,16 @@ const RequestAVisit = () => {
                           placeholder="Email (falcultatif)"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                        />
+                          />
+              {
+                errors.email && <span className="text-[#BB0D1C]" >{errors.email.message}</span>
+              }
             </div>
 
             <div className="form-group">
               
               <input
+                        {...register('Residence',{required : 'Lieu de résidence est obligatoire'})}
                           type="text"
                           name="Residence"
                           id="residence"
@@ -210,20 +157,26 @@ const RequestAVisit = () => {
                           onChange={(e) => setResidence(e.target.value)}
                           required
                         />
+              {
+                errors.Residence && <span className="text-[#BB0D1C]" >{errors.Residence.message}</span>
+              }
             </div>
 
             <div className="form-group">
             Avez-vous une fois contracté un prêt à BNI?*
             <select className="form-select" 
+               {...register('assure',{required : 'Ce champ est obligatoire'})}
                 name="assure"
                 id="assure"
                 value={assure}
                 onChange={(e) => setAssure(e.target.value)}
             required>
-              <option defaultValue="">---</option>
-              <option defaultValue="Non">Non</option>
               <option defaultValue="Oui">Oui</option>
+              <option defaultValue="Non">Non</option>
             </select>
+            {
+                errors.assure && <span className="text-[#BB0D1C]" >{errors.assure.message}</span>
+              }
           </div>
             <button type="submit" className="btn-style-one blue-dark-color">
               Valider <i className="bx bx-chevron-right"></i>
@@ -232,7 +185,8 @@ const RequestAVisit = () => {
         </div>
       </div>
     </div>
-  );
-
+  );  
 };
+
+  
 export default RequestAVisit;
