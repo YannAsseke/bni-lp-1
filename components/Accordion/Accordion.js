@@ -106,10 +106,11 @@ const AccordionItem =({open, toggle, question, answer}) => {
     return (
         <div className="pt-[10px]">
             <div className="border-b-4 border-white-600 bg-[#ff8d00] px-[50px] flex justify-beetween items-center cursor-pointer" onClick={toggle}>
-                <p className="text-[20px] text-white font-semibold">{question}</p>
-                <div className="text-[30px] text-white">
+            <div className="text-[30px] text-white pr-4">
                     {open ? <AiOutlineMinus /> : <AiOutlinePlus />}
                 </div>
+                <p className="text-[20px] text-white font-semibold">{question}</p>
+                
             </div>
 
             <Collapse isOpened={open}>
