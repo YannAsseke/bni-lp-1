@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "volkswagen-tanzanie",
+  "private_key_id": "0d286ddd801f030b57c52cf6ab00638ea074013a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDRy+Nt7lEiS2gI\n9YwfeKQk+OPj0Kc0cnKRXZW5qJlRnmRM1Buzs6UMDNyKfKAOS+LNc52UI57UZsIH\nh3LevPB2aMWUKcjqMOgn6ZbOanqelhbc38MM3coYIZTV1cyLag4ZKMyTQAQ9+OAn\n3QfMRLmDoK4qRf+58vQxx6UN7eYFLzNQ3eMFsqo4cMxh1wL8Fb2iQ6hYhtuz4P6s\nBuulaHJEGI8ZXqTF8iXqIErS0uh3TwTPJ2LipavaOb3vZxlw2MQlUc9d94eRnVLg\nzAvsAL0MBngzv67+KDLpKSTbAJGZbBhWkMFbm3Ek3p0moN3T4PshYNX7MZYdklSa\nVEVmKkpxAgMBAAECggEABRrNirsX3wpf6ojj+w+NyecC74QAD4UB3+Lbrefp7Bwb\nI2ntTyDtwQZultGLuPFUgEyB/uzjdFZYPgPoEf6dqLnppc5i+LzOJ0t2G4loeKOd\nBIyOw8lBPbdSdmYEezduRqMxIBuYhtP/i0TD5+7bpzXhiv6HR4Rfd/ccP2Okm0dk\niBPmwWy4/Sysfj882Xh6jJjYFnyWEc6cfS66cebDh+6QMmv060t8TbOjvTa8DXnL\nJQaOiihndg/taGqBJFHU8nSL7Fp0P4SC+ujV1w6g6RVBPChdXJFuezlekVaA0V1l\nvObkj8sm6W+uV+qR45+FmyCLYPqeIOSbWKePfy0DSQKBgQD+Qk2psugKLlIoD/Ij\nIScgCrtBnd7DMKkKruNpS5m7sci4g2MAH4QggVbHztRUHncriGvMvXv9EPF5QTHw\n8UvcGLNU+V2yPz/AzrcRube+7l/pyW2Jd/OCvUHwGACgYZ6KKyxqaFz9y8jRt+4a\n3t09+P6IzTrWCOP1na5+LcLkyQKBgQDTO6VC4iL0qQcJJrtrc2lsy77LX9LZstmC\nKM+G0zjSCFAtwtlfnjKGiHuUVlXUeAMx8W8ZXyWHnry5au+I+HDUVk6/7C0NNsqT\nv7b7TB3u5Az4L0Q8nNCaol1vxErzBnFUPzzaUllohHndt+DEaT1BZe06LASUX0tM\nyLAb06TUaQKBgQDQdMW9ostxRWbgJ6qquIyeTY4XDvrK5wNAmgAinPPumaTp+fZZ\n7HzkNYZTjLQyP0QO8esH0jZsVc7UTepHE13RloK44TW7ZPW8+v3Gz4/hPwht4VIo\nCasg/k+oK9WfqElWGG1y1BuhjMkZgAX8C8ox/AmbWT+qqWFURzH/iz8lWQKBgAOa\neuE/NlVyJLqVPJFCsMO4XhLeGZy5HljIFXI5XDjJB4UgU9D7w+TjoygOqPws5/EM\nK1cFdoBvxsxq9Jcjldkpd8JyZvpYuu/2T0rOK5yNq2L4e3OFQVHB/1IOyTCIJZrI\nUWNwEDJmQCX2IxF2siLReFCLu7BER+aRbd+rpp4xAoGBALCj7Vy2xhbBtkgHMXF8\n1P83vmREB6+nC3nqUYfnqZR4OrYYfmBv7y/3R3A5zz8Radna9cYEqWw4+OeadWEh\nooEq/u072xwBszvFgELJkZT10Uy7unpgyKANnQH6uaLR64R52nWd/CaDiWfyiNty\npbF2gcWlXwN5xZ1GGTeu4/Hx\n-----END PRIVATE KEY-----\n",
+  "client_email": "sheet-volkswagen@volkswagen-tanzanie.iam.gserviceaccount.com",
+  "client_id": "100272302595705651472",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sheet-volkswagen%40volkswagen-tanzanie.iam.gserviceaccount.com"
+}
