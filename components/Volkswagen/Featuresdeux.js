@@ -3,7 +3,6 @@ import Link from "next/link";
 import axios from "axios";
 import baseApiUrl from "@/utils/baseApiUrl";
 import Image from "next/image";
-import features2 from "@/public/images/bni-lp.jpg";
 import RequestAVisit from "@/components/Volkswagen/RequestAVisit";
 import AccordionItem from '@/components/Accordion/Accordion';
 
@@ -85,27 +84,13 @@ const accordionData =[
 
             <div className="overview-item-style-two bg-f9f9f9">
               <div className="row">
-                <div
-                  className="col-lg-6 col-md-10 overview-image"
-                  data-aos="fade-up"
-                  data-aos-duration="1200"
-                >
-                  <Image
-                    src={
-                      features2
-                    }
-                  />
-                </div>
-
-                <div className="col-lg-6 col-md-10 overview-content">
+                <div className="col  overview-content">
                   <div className="text-5xl text-center font-bold text-[#009043]" >
                   BONNE ANNEE CREDIT
                   </div>
                   <br></br>
-                  <br></br>
-                  <br></br>
                   <section className=" grid place-items-center">
-                    <div className="px-[35px] max-w-[800px]">
+                    <div className="px-[3px] max-w-[800px]">
                       {accordionData.map((data, index) => {
                         return <AccordionItem key={index} open={index === open} question={data.question} answer={data.answer} toggle={() => toggle(index)}/>
                       })}

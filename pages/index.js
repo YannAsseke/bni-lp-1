@@ -10,6 +10,7 @@ import FooterOne from "@/components/Volkswagen/FooterOne";
 export default function Home ()  {
   return (
     <>
+      <Banner />
       <Featuresdeux />
       <RequestAVisit />
     </>

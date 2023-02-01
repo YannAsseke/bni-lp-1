@@ -104,7 +104,7 @@ import { Collapse } from "react-collapse";
 
 const AccordionItem =({open, toggle, question, answer}) => {
     return (
-        <div className="pt-[10px]">
+        <div className="py-[10px]">
             <div className="border-b-4 border-white-600 bg-[#ff8d00] px-[50px] flex justify-beetween items-center cursor-pointer" onClick={toggle}>
             <div className="text-[30px] text-white pr-4">
                     {open ? <AiOutlineMinus /> : <AiOutlinePlus />}
