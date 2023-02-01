@@ -96,7 +96,7 @@ Business Banner Area CSS
 
 @media only screen and (max-width: 600px) {
   .business-banner-area {
-    padding: 23vh 0;
+    padding: 25vh 0;
       background-image: url(/images/bni-banner-3.jpg);
       background-position: center center;
       background-repeat: no-repeat;
@@ -11453,7 +11453,7 @@ body{
 }
 
 .overview-area.ptb-50.bg-ffffff > .container {
-  padding-top: 20px;
+  padding-top: 20px 0;
 }
 
 
@@ -11478,10 +11478,15 @@ body{
 }
 
 .overview-item-style-two .overview-content{
-  padding-right: 0 !important;
+  padding: 0 !important;
 }
 
 .overview-area.ptb-50.bg-ffffff > .container {
-  padding: 20px 0 0 0;
+  padding: 20px 0;
+}
+
+.img-prop{
+  height: 70% !important;
+  width: 70% !important;
 }
 /*# sourceMappingURL=style.css.map */

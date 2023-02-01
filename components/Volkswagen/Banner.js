@@ -10,7 +10,7 @@ const Banner = () => {
     <>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand m-0 p-0" href="#">
           <div
                   className="col-xs-8 col-sm-10 overview-image"
                 >
