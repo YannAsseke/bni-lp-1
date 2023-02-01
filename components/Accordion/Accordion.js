@@ -109,7 +109,7 @@ const AccordionItem =({open, toggle, question, answer}) => {
             <div className="text-[30px] text-white pr-4">
                     {open ? <AiOutlineMinus /> : <AiOutlinePlus />}
                 </div>
-                <p className="text-[12px] text-white font-semibold">{question}</p>
+                <p className="text-[11px] text-white font-semibold">{question}</p>
                 
             </div>
 
