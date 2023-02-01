@@ -114,7 +114,7 @@ const AccordionItem =({open, toggle, question, answer}) => {
             </div>
 
             <Collapse isOpened={open}>
-                <div className="bg-white px-[50px] pb-[20px] font-bold align-middle inline-block">{answer}</div>
+                <div className="bg-white pb-[20px] font-bold align-middle inline-block">{answer}</div>
             </Collapse>
         </div>
     )
