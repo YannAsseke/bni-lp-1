@@ -72,7 +72,7 @@ const RequestAVisit = () => {
   return (
     <div className="request-a-visit-area bg2 ptb-50" id="forms">
       <div className="container">
-	  <h4 className="cliauto_text_form">Pour bénéficier de l'offre, veuillez remplir ce formulaire.</h4>
+	  <h4 className="cliauto_text_form">Pour bénéficier de l'offre,<br></br> veuillez remplir ce formulaire.</h4>
         <div
           className="request-a-visit-form"
         >
