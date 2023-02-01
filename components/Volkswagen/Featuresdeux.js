@@ -72,7 +72,7 @@ const accordionData =[
     <>
     
       <div className="overview-area ptb-50 bg-ffffff">
-        <div className="container">
+        <div className="container w-[90%]">
 
              
 
