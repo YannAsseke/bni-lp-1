@@ -89,8 +89,8 @@ const accordionData =[
                   BONNE ANNEE CREDIT
                   </div>
                   <br></br>
-                  <section className=" grid place-items-center">
-                    <div className="px-[3px] max-w-[800px]">
+                  <section className=" grid place-items-center w-[100%]">
+                    <div className="max-w-[800px] w-[90%]">
                       {accordionData.map((data, index) => {
                         return <AccordionItem key={index} open={index === open} question={data.question} answer={data.answer} toggle={() => toggle(index)}/>
                       })}
