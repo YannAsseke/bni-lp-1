@@ -11370,6 +11370,7 @@ Sidebar Modal CSS
   font-weight: 500;
   font-family: var(--vwtextregularFontFamily);
   width: 200px;
+  height: 51px;
   /* line-height: 50px;*/
 }
 
